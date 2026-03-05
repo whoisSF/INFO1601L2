@@ -1,19 +1,196 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=, initial-scale=" />
     <title>Home</title>
+    <style>
+      /*select by tag name*/
+      p {
+        color: green;
+      }
+
+      /*select by id */
+      #myHeading {
+        color: blue;
+      }
+
+      /*select by class */
+      .yellowBkg {
+        background-color: yellow;
+      }
+
+      /*apply to all selectors */
+      p,
+      #myHeading,
+      .myClass {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <nav>
-      <a href="index.html"><b>Home</b></a>
- 
+      <a href="index.html"><b>Index</b></a>
+      <a href="pages/signup.html"><b>Sign UP</b></a>
+      <h1>Home</h1>
     </nav>
     <h1>Home</h1>
 
-  
+    <h1 id="myHeading">Hello World!</h1>
+    <h2 class="yellowBkg">Smaller heading!</h2>
+    <p class="yellowBkg">This is a paragraph.</p>
 
+    <table border="solid">
+      <thead>
+        <th>Item</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Total</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Milk</td>
+          <td>2</td>
+          <td>$8.00</td>
+          <td>$16.00</td>
+        </tr>
+        <tr>
+          <td>Eggs Pack</td>
+          <td>1</td>
+          <td>$6.00</td>
+          <td>$6.00</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Total</td>
+          <td></td>
+          <td></td>
+          <td>$22.00</td>
+        </tr>
+      </tfoot>
+    </table>
 
+    <picture>
+      <source
+        media="(min-width: 650px)"
+        srcset="
+          https://thehowler.org/wp-content/uploads/2018/01/roll-safe-meme-1.jpg
+        "
+      />
+      <source
+        media="(min-width: 465px)"
+        srcset="
+          https://thehowler.org/wp-content/uploads/2018/01/roll-safe-meme-1.jpg
+        "
+      />
+      <img
+        src="https://thehowler.org/wp-content/uploads/2018/01/roll-safe-meme-1.jpg"
+        alt="man thinking"
+        style="width: auto"
+      />
+    </picture>
+
+    <video width="320" height="240" controls>
+      <source
+        src="https://www.youtube.com/watch?v=X3N0u4oL6gg&list=RDX3N0u4oL6gg&start_radio=1&pp=oAcB"
+        type="video/mp4"
+      />
+      <source
+        src="https://www.pexels.com/download/video/10612781/"
+        type="video/ogg"
+      />
+    </video>
+
+    <form action="../results.html" method="GET">
+      <fieldset>
+        <legend>Demographic Info</legend>
+
+        <label>
+          Full Name
+          <input type="text" placeholder="Enter your name" name="fullname" />
+        </label>
+
+        <br />
+
+        <label>
+          Sex
+          <select name="sex">
+            <option value="1">male</option>
+            <option value="2">female</option>
+            <option value="3">other</option>
+          </select>
+        </label>
+
+        <br />
+
+        <label for="dob">Date Of Birth</label>
+        <input type="date" value="2000-01-01" name="dob" />
+
+        <br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact Info</legend>
+
+        <label>
+          Email
+          <input type="email" name="email" />
+        </label>
+
+        <br />
+
+        <label>
+          County
+          <input list="counties" name="county" />
+          <datalist id="counties">
+            <option value="Caroni"></option>
+            <option value="Mayaro"></option>
+            <option value="Nariva"></option>
+            <option value="Saint Andrew"></option>
+            <option value="Saint David"></option>
+            <option value="Saint George"></option>
+            <option value="Saint Patrick"></option>
+            <option value="Victoria"></option>
+          </datalist>
+        </label>
+
+        <br />
+
+        <label>
+          Telephone
+          <input type="tel" name="telephone" />
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Courses</legend>
+
+        <label>
+          <input type="checkbox" name="courses" value="info1601" checked />
+          <span>Info 1601</span>
+        </label>
+
+        <label>
+          <input type="checkbox" name="courses" value="comp1602" />
+          <span>COMP 1602</span>
+        </label>
+
+        <label>
+          <input type="checkbox" name="courses" value="comp1603" />
+          <span>COMP 1603</span>
+        </label>
+
+        <label>
+          <input type="checkbox" name="courses" value="comp1604" />
+          <span>COMP 1604</span>
+        </label>
+      </fieldset>
+
+      <br />
+      <input type="submit" value="signup" />
+    </form>
+
+    <script src="script.js"></script>
   </body>
 </html>
